@@ -1,0 +1,32 @@
+{
+    "name": "scss-colors-variables",
+    "version": "1.0.0",
+    "description": "Some utils for set your theming colors as variables",
+    "main": "index.scss",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "build": "node-sass **/*.scss -o css/",
+        "watch": "npm run build --watch ",
+        "publish": "np --no-tests"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/danilozano413/scss-colors-variables.git"
+    },
+    "keywords": [
+        "scss",
+        "utils"
+    ],
+    "author": "Dani Lozano",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/danilozano413/scss-colors-variables/issues"
+    },
+    "homepage": "https://github.com/danilozano413/scss-colors-variables#readme",
+    "devDependencies": {
+        "gulp": "^4.0.2",
+        "gulp-sass": "^5.1.0",
+        "node-sass": "^7.0.1",
+        "np": "^7.6.2"
+    }
+}
