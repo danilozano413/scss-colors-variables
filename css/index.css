@@ -1,72 +1,3 @@
-/*
-   * iOS Dark Theme
-   * -------------------------------------------
-   */
-.ios body.dark {
-  --ion-background-color: #000000;
-  --ion-background-color-rgb: 0, 0, 0;
-  --ion-text-color: #ffffff;
-  --ion-text-color-rgb: 255, 255, 255;
-  --ion-color-step-50: #0d0d0d;
-  --ion-color-step-100: #1a1a1a;
-  --ion-color-step-150: #262626;
-  --ion-color-step-200: #333333;
-  --ion-color-step-250: #404040;
-  --ion-color-step-300: #4d4d4d;
-  --ion-color-step-350: #595959;
-  --ion-color-step-400: #666666;
-  --ion-color-step-450: #737373;
-  --ion-color-step-500: #808080;
-  --ion-color-step-550: #8c8c8c;
-  --ion-color-step-600: #999999;
-  --ion-color-step-650: #a6a6a6;
-  --ion-color-step-700: #b3b3b3;
-  --ion-color-step-750: #bfbfbf;
-  --ion-color-step-800: #cccccc;
-  --ion-color-step-850: #d9d9d9;
-  --ion-color-step-900: #e6e6e6;
-  --ion-color-step-950: #f2f2f2;
-  --ion-item-background: #000000;
-  --ion-card-background: #1c1c1d; }
-  .ios body.dark ion-modal {
-    --ion-background-color: var(--ion-color-step-100);
-    --ion-toolbar-background: var(--ion-color-step-150);
-    --ion-toolbar-border-color: var(--ion-color-step-250); }
-
-/*
-   * Material Design Dark Theme
-   * -------------------------------------------
-   */
-.md body.dark {
-  --ion-background-color: #121212;
-  --ion-background-color-rgb: 18, 18, 18;
-  --ion-text-color: #ffffff;
-  --ion-text-color-rgb: 255, 255, 255;
-  --ion-border-color: #222222;
-  --ion-color-step-50: #1e1e1e;
-  --ion-color-step-100: #2a2a2a;
-  --ion-color-step-150: #363636;
-  --ion-color-step-200: #414141;
-  --ion-color-step-250: #4d4d4d;
-  --ion-color-step-300: #595959;
-  --ion-color-step-350: #656565;
-  --ion-color-step-400: #717171;
-  --ion-color-step-450: #7d7d7d;
-  --ion-color-step-500: #898989;
-  --ion-color-step-550: #949494;
-  --ion-color-step-600: #a0a0a0;
-  --ion-color-step-650: #acacac;
-  --ion-color-step-700: #b8b8b8;
-  --ion-color-step-750: #c4c4c4;
-  --ion-color-step-800: #d0d0d0;
-  --ion-color-step-850: #dbdbdb;
-  --ion-color-step-900: #e7e7e7;
-  --ion-color-step-950: #f3f3f3;
-  --ion-item-background: #1e1e1e;
-  --ion-toolbar-background: #1f1f1f;
-  --ion-tab-bar-background: #1f1f1f;
-  --ion-card-background: #1e1e1e; }
-
 :root {
   --color-primary: #3880ff;
   --color-primary-rgb: 56, 128, 255;
@@ -2248,69 +2179,116 @@ body.contrast {
   --color-base-rgb: var(--color-primary-rgb) !important;
   --color-contrast: var(--color-primary-contrast) !important;
   --color-contrast-rgb: var(--color-primary-contrast-rgb) !important;
+  --color-tint: var(--color-primary-tint) !important;
   --color-shade: var(--color-primary-shade) !important;
-  --color-tint: var(--color-primary-tint) !important; }
+  --color-light: var(--color-primary-light) !important;
+  --color-dark: var(--color-primary-dark) !important;
+  --color-opacity: var(--color-primary-opacity) !important;
+  --color-trans: var(--color-primary-trans) !important;
+  --color-lucid: var(--color-primary-lucid) !important; }
 
 .color-secondary, .color--secondary {
   --color-base: var(--color-secondary) !important;
   --color-base-rgb: var(--color-secondary-rgb) !important;
   --color-contrast: var(--color-secondary-contrast) !important;
   --color-contrast-rgb: var(--color-secondary-contrast-rgb) !important;
+  --color-tint: var(--color-secondary-tint) !important;
   --color-shade: var(--color-secondary-shade) !important;
-  --color-tint: var(--color-secondary-tint) !important; }
+  --color-light: var(--color-secondary-light) !important;
+  --color-dark: var(--color-secondary-dark) !important;
+  --color-opacity: var(--color-secondary-opacity) !important;
+  --color-trans: var(--color-secondary-trans) !important;
+  --color-lucid: var(--color-secondary-lucid) !important; }
 
 .color-tertiary, .color--tertiary {
   --color-base: var(--color-tertiary) !important;
   --color-base-rgb: var(--color-tertiary-rgb) !important;
   --color-contrast: var(--color-tertiary-contrast) !important;
   --color-contrast-rgb: var(--color-tertiary-contrast-rgb) !important;
+  --color-tint: var(--color-tertiary-tint) !important;
   --color-shade: var(--color-tertiary-shade) !important;
-  --color-tint: var(--color-tertiary-tint) !important; }
+  --color-light: var(--color-tertiary-light) !important;
+  --color-dark: var(--color-tertiary-dark) !important;
+  --color-opacity: var(--color-tertiary-opacity) !important;
+  --color-trans: var(--color-tertiary-trans) !important;
+  --color-lucid: var(--color-tertiary-lucid) !important; }
 
 .color-success, .color--success {
   --color-base: var(--color-success) !important;
   --color-base-rgb: var(--color-success-rgb) !important;
   --color-contrast: var(--color-success-contrast) !important;
   --color-contrast-rgb: var(--color-success-contrast-rgb) !important;
+  --color-tint: var(--color-success-tint) !important;
   --color-shade: var(--color-success-shade) !important;
-  --color-tint: var(--color-success-tint) !important; }
+  --color-light: var(--color-success-light) !important;
+  --color-dark: var(--color-success-dark) !important;
+  --color-opacity: var(--color-success-opacity) !important;
+  --color-trans: var(--color-success-trans) !important;
+  --color-lucid: var(--color-success-lucid) !important; }
 
 .color-warning, .color--warning {
   --color-base: var(--color-warning) !important;
   --color-base-rgb: var(--color-warning-rgb) !important;
   --color-contrast: var(--color-warning-contrast) !important;
   --color-contrast-rgb: var(--color-warning-contrast-rgb) !important;
+  --color-tint: var(--color-warning-tint) !important;
   --color-shade: var(--color-warning-shade) !important;
-  --color-tint: var(--color-warning-tint) !important; }
+  --color-light: var(--color-warning-light) !important;
+  --color-dark: var(--color-warning-dark) !important;
+  --color-opacity: var(--color-warning-opacity) !important;
+  --color-trans: var(--color-warning-trans) !important;
+  --color-lucid: var(--color-warning-lucid) !important; }
 
 .color-danger, .color--danger {
   --color-base: var(--color-danger) !important;
   --color-base-rgb: var(--color-danger-rgb) !important;
   --color-contrast: var(--color-danger-contrast) !important;
   --color-contrast-rgb: var(--color-danger-contrast-rgb) !important;
+  --color-tint: var(--color-danger-tint) !important;
   --color-shade: var(--color-danger-shade) !important;
-  --color-tint: var(--color-danger-tint) !important; }
+  --color-light: var(--color-danger-light) !important;
+  --color-dark: var(--color-danger-dark) !important;
+  --color-opacity: var(--color-danger-opacity) !important;
+  --color-trans: var(--color-danger-trans) !important;
+  --color-lucid: var(--color-danger-lucid) !important; }
 
 .color-dark, .color--dark {
   --color-base: var(--color-dark) !important;
   --color-base-rgb: var(--color-dark-rgb) !important;
   --color-contrast: var(--color-dark-contrast) !important;
   --color-contrast-rgb: var(--color-dark-contrast-rgb) !important;
+  --color-tint: var(--color-dark-tint) !important;
   --color-shade: var(--color-dark-shade) !important;
-  --color-tint: var(--color-dark-tint) !important; }
+  --color-light: var(--color-dark-light) !important;
+  --color-dark: var(--color-dark-dark) !important;
+  --color-opacity: var(--color-dark-opacity) !important;
+  --color-trans: var(--color-dark-trans) !important;
+  --color-lucid: var(--color-dark-lucid) !important; }
 
 .color-medium, .color--medium {
   --color-base: var(--color-medium) !important;
   --color-base-rgb: var(--color-medium-rgb) !important;
   --color-contrast: var(--color-medium-contrast) !important;
   --color-contrast-rgb: var(--color-medium-contrast-rgb) !important;
+  --color-tint: var(--color-medium-tint) !important;
   --color-shade: var(--color-medium-shade) !important;
-  --color-tint: var(--color-medium-tint) !important; }
+  --color-light: var(--color-medium-light) !important;
+  --color-dark: var(--color-medium-dark) !important;
+  --color-opacity: var(--color-medium-opacity) !important;
+  --color-trans: var(--color-medium-trans) !important;
+  --color-lucid: var(--color-medium-lucid) !important; }
 
 .color-light, .color--light {
   --color-base: var(--color-light) !important;
   --color-base-rgb: var(--color-light-rgb) !important;
   --color-contrast: var(--color-light-contrast) !important;
   --color-contrast-rgb: var(--color-light-contrast-rgb) !important;
+  --color-tint: var(--color-light-tint) !important;
   --color-shade: var(--color-light-shade) !important;
-  --color-tint: var(--color-light-tint) !important; }
+  --color-light: var(--color-light-light) !important;
+  --color-dark: var(--color-light-dark) !important;
+  --color-opacity: var(--color-light-opacity) !important;
+  --color-trans: var(--color-light-trans) !important;
+  --color-lucid: var(--color-light-lucid) !important; }
+
+/*# sourceMappingURL=index.css.map */
