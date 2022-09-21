@@ -7,7 +7,10 @@
     --color-#{'' + $name}-rgb: #{parseRgb(color($name, 'base', $scheme))};
 
     //contrast
-    --color-#{'' + $name}-contrast: var(--color-#{opposed($name, $scheme)});
+    --color-#{'' + $name}-contrast: var(
+        --color-#{opposed($name, $scheme)},
+        #{color(opposed($name, $scheme), 'base', $scheme)}
+    );
     //contrast rgb
     --color-#{'' + $name}-contrast-rgb: #{parseRgb(color(opposed($name, $scheme), 'base', $scheme))};
 }
@@ -19,7 +22,10 @@
     --color-#{'' + $name}-#{'' + $config}-rgb: #{parseRgb(color($name, $config, $scheme))};
 
     //contrast
-    --color-#{'' + $name}-#{'' + $config}-contrast: var(--color-#{'' + $name}-#{opposedConfig($config)});
+    --color-#{'' + $name}-#{'' + $config}-contrast: var(
+        --color-#{'' + $name}-#{opposedConfig($config)},
+        color($name, opposedConfig($config), $scheme)
+    );
     // contrast rgb
     --color-#{'' + $name}-#{'' + $config}-contrast-rgb: #{parseRgb(color($name, opposedConfig($config), $scheme))};
 }
