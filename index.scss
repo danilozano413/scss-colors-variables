@@ -80,16 +80,25 @@ body {
         &-#{'' + $name},
         &--#{'' + $name} {
             //base
-            --color-base: var(--color-#{'' + $name}) !important;
+            --color-base: var(--color-#{'' + $name}, #{color($name)}) !important;
             // rgb
-            --color-base-rgb: var(--color-#{'' + $name}-rgb) !important;
+            --color-base-rgb: var(--color-#{'' + $name}-rgb, #{parseRgb(color($name))}) !important;
             //contrast
-            --color-contrast: var(--color-#{'' + $name}-contrast) !important;
+            --color-contrast: var(
+                --color-#{'' + $name}-contrast,
+                var(--color-#{opposed($name)}, #{color(opposed($name))})
+            ) !important;
             //contrast rgb
-            --color-contrast-rgb: var(--color-#{'' + $name}-contrast-rgb) !important;
+            --color-contrast-rgb: var(
+                --color-#{'' + $name}-contrast-rgb,
+                #{parseRgb(color(opposed($name)))}
+            ) !important;
 
             @each $config, $value in $colors_config {
-                --color-#{'' + $config}: var(--color-#{'' + $name}-#{'' + $config}) !important;
+                --color-#{'' + $config}: var(
+                    --color-#{'' + $name}-#{'' + $config},
+                    #{color($name, $config)}
+                ) !important;
             }
         }
     }
