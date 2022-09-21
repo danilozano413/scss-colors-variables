@@ -7,7 +7,7 @@
         "test": "echo \"Error: no test specified\" && exit 1",
         "build": "node-sass --recursive --output css --source-map true --source-map-contents --importer node_modules/node-sass-package-importer/dist/cli.js index.scss",
         "watch": "npm run build --watch ",
-        "publish": "np --no-tests"
+        "npm-publish": "np --no-tests"
     },
     "repository": {
         "type": "git",
