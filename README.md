@@ -13,7 +13,7 @@
 Add precompiled scss to your global style scss file
 
 ``` scss
-    @import '~ionic-scss-utils';
+    @import 'scss-colors-variables';
 ```  
 
 or
@@ -21,17 +21,12 @@ or
 Add compiled css
 
 ``` scss
-    @import '~ionic-scss-utils/css';
+    @import 'scss-colors-variables/css';
 ```  
 
-## Use own colors
+## Use with ionic
 
-Create your variables.scss and include before import this package
-
-```  scss
-    @import './variables.scss';
-    @import '~ionic-scss-utils/utils.scss';
-```
+Read my other library to compile  for Ionic with some helpers [Ionic Scss Utils](https://github.com/danilozano413/ionic-scss-utils)
 
 ## Libraries compatibility
 
