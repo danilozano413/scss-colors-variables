@@ -1,6 +1,6 @@
 {
     "name": "scss-colors-variables",
-    "version": "1.3.2",
+    "version": "1.4.0",
     "description": "Some utils for set your theming colors as variables",
     "main": "index.scss",
     "engines": {
