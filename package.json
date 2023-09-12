@@ -8,7 +8,7 @@
     },
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "build": "node-sass --recursive --output css --source-map true --source-map-contents --importer node_modules/node-sass-package-importer/dist/cli.js index.scss",
+        "build": "sass  *.scss:css/*.css",
         "watch": "npm run build --watch ",
         "npm-publish": "np --no-tests"
     },
@@ -27,10 +27,14 @@
     },
     "homepage": "https://github.com/danilozano413/scss-colors-variables#readme",
     "devDependencies": {
+        "autoprefixer": "^10.4.15",
         "gulp": "^4.0.2",
+        "gulp-postcss": "^9.0.1",
         "gulp-sass": "^5.1.0",
-        "node-sass": "^9.0.0",
-        "node-sass-package-importer": "^5.3.3",
-        "np": "^8.0.4"
+        "np": "^8.0.4",
+        "sass": "^1.66.1"
+    },
+    "dependencies": {
+        "gulp-sass-glob": "^1.1.0"
     }
 }

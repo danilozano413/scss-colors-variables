@@ -27,6 +27,7 @@ Add compiled css
 ## TODO
 
 - Add package for regenerate variables with loaded colors from external source
+- Add contribution docs
 
 ## Use with ionic
 
