@@ -24,14 +24,27 @@
     //contrast
     --color-#{'' + $name}-#{'' + $config}-contrast: var(
         --color-#{'' + $name}-#{opposedConfig($config)},
-        color($name, opposedConfig($config), $scheme)
+        #{color($name, opposedConfig($config), $scheme)}
     );
     // contrast rgb
     --color-#{'' + $name}-#{'' + $config}-contrast-rgb: #{parseRgb(color($name, opposedConfig($config), $scheme))};
 }
 
+@mixin colorSteps($name, $scheme: light) {
+    @for $index from 0 through 20 {
+        $step: ($index) * 50;
+
+        --color-#{'' + $name}-step-#{'' + $step}: #{stepped($index, $name, $scheme)};
+    }
+}
+
 @mixin colorContent($name, $scheme: light) {
+    //color
     @include colorVariables($name, $scheme);
+    // steps
+    @include colorSteps($name, $scheme);
+
+    // configs
     @each $config, $value in $colors_config {
         @include colorConfigVariables($name, $config, $scheme);
     }

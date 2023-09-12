@@ -3,7 +3,7 @@
 /// Parse color hexadecimal to Rgb
 /// @access public
 /// @param {Color} $color - color to parse
-/// @return {Color}
+/// @return {Color} Generated Color
 @function parseRgb($color) {
     @return #{red($color), green($color), blue($color)};
 }
@@ -12,7 +12,7 @@
 /// @access public
 /// @param {Color} $color - color to tint
 /// @param {Number} $percentage - percentage of `$color` in returned color
-/// @return {Color}
+/// @return {Color} Generated Color
 @function tint($color, $percentage: 15%) {
     @return mix(white, $color, $percentage);
 }
@@ -21,7 +21,7 @@
 /// @access public
 /// @param {Color} $color - color to shade
 /// @param {Number} $percentage - percentage of `$color` in returned color
-/// @return {Color}
+/// @return {Color} Generated Color
 @function shade($color, $percentage: 15%) {
     @return mix(black, $color, $percentage);
 }
@@ -30,7 +30,7 @@
 /// @access public
 /// @param {Color} $color - color to light
 /// @param {Number} $percentage - percentage of `$color` in returned color
-/// @return {Color}
+/// @return {Color} Generated Color
 @function light($color, $percentage: 30%) {
     @return lighten($color, $percentage);
 }
@@ -39,7 +39,7 @@
 /// @access public
 /// @param {Color} $color - color to dark
 /// @param {Number} $percentage - percentage of `$color` in returned color
-/// @return {Color}
+/// @return {Color}  Generated Color
 @function dark($color, $percentage: 30%) {
     @return darken($color, $percentage);
 }
@@ -48,7 +48,7 @@
 /// @access public
 /// @param {Color} $color - color to transparentize
 /// @param {Number} $percentage - percentage of `$color` in returned color
-/// @return {Color}
+/// @return {Color} Generated Color
 @function opacity($color, $percentage: 0.8) {
     @return transparentize($color, $percentage);
 }
@@ -57,7 +57,7 @@
 /// @access public
 /// @param {Color} $color - color to transparentize
 /// @param {Number} $percentage - percentage of `$color` in returned color
-/// @return {Color}
+/// @return {Color} Generated Color
 @function trans($color, $percentage: 0.4) {
     @return transparentize($color, $percentage);
 }
@@ -66,7 +66,7 @@
 /// @access public
 /// @param {Color} $color - color to transparentize
 /// @param {Number} $percentage - percentage of `$color` in returned color
-/// @return {Color}
+/// @return {Color} Generated Color
 @function lucid($color, $percentage: 0.2) {
     @return transparentize($color, $percentage);
 }
@@ -124,4 +124,18 @@
 /// @return  {String} color-variation
 @function contrast($color: primary, $variant: base) {
     @return opposed($color) + '-' + opposedConfig($variant);
+}
+
+@function stepped($index: 0, $color-name: 'primary', $color-schema: 'light') {
+    @return generateSteppedColor(
+        color($color-name, 'base', $color-schema),
+        color(opposed($color-name, $color-schema), 'base', $color-schema),
+        $index
+    );
+}
+
+@function generateSteppedColor($color: '#000000', $opposed: '#ffffff', $index: 0) {
+    $percentage: (($index) * 5) * 1%;
+
+    @return mix($color, $opposed, $percentage);
 }

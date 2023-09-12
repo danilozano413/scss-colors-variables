@@ -15,7 +15,7 @@ const scss = () =>
         .src(paths.src)
         .pipe(sassGlob())
         .pipe(sass().on('error', sass.logError))
-        .pipe(sass({ outputStyle: 'compressed' }))
+        // .pipe(sass({ outputStyle: 'compressed' }))
         .pipe(postcss([autoprefixer()]))
         .pipe(gulp.dest(paths.dest));
 
@@ -26,5 +26,5 @@ const watch = () => gulp.watch(paths.src, ['scss']);
 
 exports.watch = watch;
 
-gulp.task('scss', watch);
-gulp.task('watch', scss);
+gulp.task('scss', scss);
+gulp.task('watch', watch);
