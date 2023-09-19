@@ -36,6 +36,6 @@ Read my other library to compile for Ionic with some helpers [Ionic Scss Utils](
 ## Libraries compatibility
 
 - [Tailwindcss](https://tailwindcss.com/) ([See tailwind config doc](./TAILWIND_CONFIG_DOC.md))
-- [Angular Material](https://tailwindcss.com/) ([See tailwind config doc](./TAILWIND_CONFIG_DOC.md))
-- [Ionic Framewoek](https://ionicframework.com/)
+- [Angular Material](https://material.angular.io/) ([See material config doc](./MATERIAL_CONFIG_DOC.md))
+- [Ionic Framework](https://ionicframework.com/)
 - [Ionic Scss Utils](https://github.com/danilozano413/ionic-scss-utils)
