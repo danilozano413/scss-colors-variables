@@ -15,7 +15,7 @@ const scss = () =>
         .src(paths.src)
         .pipe(sassGlob())
         .pipe(sass().on('error', sass.logError))
-        // .pipe(sass({ outputStyle: 'compressed' }))
+        .pipe(sass({ outputStyle: 'compressed' }))
         .pipe(postcss([autoprefixer()]))
         .pipe(gulp.dest(paths.dest));
 
