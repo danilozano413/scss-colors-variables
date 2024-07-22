@@ -10,7 +10,7 @@
         "test": "echo \"Error: no test specified\" && exit 1",
         "build": "gulp scss",
         "watch": "gulp watch ",
-        "npm-publish": "np --no-tests"
+        "release": "np --no-tests"
     },
     "repository": {
         "type": "git",
